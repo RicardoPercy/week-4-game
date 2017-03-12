@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)https://learn.jquery.com/using-jquery-core/document-ready/ -->
+<html class="js multiplebgs boxshadow cssgradients wf-klavikaweb-n7-active wf-sourcecodepro-n4-active wf-sourcecodepro-n7-active wf-klavikaweb-i7-active wf-active" lang="en-US"><!--<![endif]--><head data-live-domain="learn.jquery.com"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" async="" src="./$( document ).ready() _ jQuery Learning Center_files/ados"></script>
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>$( document ).ready() | jQuery Learning Center</title>
+
+	<meta name="author" content="jQuery Foundation - jquery.org">
+	<meta name="description" content="">
+
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="shortcut icon" href="https://learn.jquery.com/jquery-wp-content/themes/learn.jquery.com/i/favicon.ico">
+
+	<link rel="stylesheet" href="./$( document ).ready() _ jQuery Learning Center_files/base.css">
+	<link rel="stylesheet" href="./$( document ).ready() _ jQuery Learning Center_files/style.css">
+
+	<script type="text/javascript" async="" src="./$( document ).ready() _ jQuery Learning Center_files/ga.js"></script><script src="./$( document ).ready() _ jQuery Learning Center_files/modernizr.custom.2.8.3.min.js"></script>
+
+	<script src="./$( document ).ready() _ jQuery Learning Center_files/jquery-1.11.3.js"></script>
+
+	<script src="./$( document ).ready() _ jQuery Learning Center_files/plugins.js"></script>
+	<script src="./$( document ).ready() _ jQuery Learning Center_files/main.js"></script>
+
+	<script src="./$( document ).ready() _ jQuery Learning Center_files/wde1aof.js"></script>
+	<style type="text/css">.tk-klavika-web{font-family:"klavika-web",sans-serif;}.tk-source-code-pro{font-family:"source-code-pro",sans-serif;}</style><style type="text/css">@font-face{font-family:klavika-web;src:url(https://use.typekit.net/af/83c7d4/00000000000000003b9acdf9/27/l?subset_id=2&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/83c7d4/00000000000000003b9acdf9/27/d?subset_id=2&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/83c7d4/00000000000000003b9acdf9/27/a?subset_id=2&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;}@font-face{font-family:klavika-web;src:url(https://use.typekit.net/af/b9c314/00000000000000003b9acdfa/27/l?subset_id=2&fvd=i7&v=3) format("woff2"),url(https://use.typekit.net/af/b9c314/00000000000000003b9acdfa/27/d?subset_id=2&fvd=i7&v=3) format("woff"),url(https://use.typekit.net/af/b9c314/00000000000000003b9acdfa/27/a?subset_id=2&fvd=i7&v=3) format("opentype");font-weight:700;font-style:italic;}@font-face{font-family:source-code-pro;src:url(https://use.typekit.net/af/269954/0000000000000000000179d5/27/l?subset_id=2&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/269954/0000000000000000000179d5/27/d?subset_id=2&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/269954/0000000000000000000179d5/27/a?subset_id=2&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;}@font-face{font-family:source-code-pro;src:url(https://use.typekit.net/af/9b5d7b/0000000000000000000179cf/27/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/9b5d7b/0000000000000000000179cf/27/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/9b5d7b/0000000000000000000179cf/27/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;}</style><script>try{Typekit.load();}catch(e){}</script>
+
+<link rel="https://api.w.org/" href="https://learn.jquery.com/wp-json/">
+<meta name="generator" content="WordPress 4.5.2">
+<link rel="alternate" type="application/json+oembed" href="https://learn.jquery.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Flearn.jquery.com%2Fusing-jquery-core%2Fdocument-ready%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://learn.jquery.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Flearn.jquery.com%2Fusing-jquery-core%2Fdocument-ready%2F&amp;format=xml">
+
+</head>
+<body class="jquery-learn page page-id-123 page-child parent-pageid-29 page-template-default page-slug-document-ready single-author singular">
+
+<header>
+	<section id="global-nav">
+		<nav>
+			<div class="constrain">
+				<ul class="projects">
+					<li class="project jquery"><a href="http://jquery.com/" title="jQuery">jQuery</a></li>
+					<li class="project jquery-ui"><a href="http://jqueryui.com/" title="jQuery UI">jQuery UI</a></li>
+					<li class="project jquery-mobile"><a href="http://jquerymobile.com/" title="jQuery Mobile">jQuery Mobile</a></li>
+					<li class="project sizzlejs"><a href="http://sizzlejs.com/" title="Sizzle">Sizzle</a></li>
+					<li class="project qunitjs"><a href="http://qunitjs.com/" title="QUnit">QUnit</a></li>
+				</ul>
+				<ul class="links l_tinynav1">
+					<li><a href="http://plugins.jquery.com/">Plugins</a></li>
+					<li class="dropdown"><a href="http://contribute.jquery.org/">Contribute</a>
+						<ul>
+							<li><a href="http://contribute.jquery.org/CLA/">CLA</a></li>
+							<li><a href="http://contribute.jquery.org/style-guide/">Style Guides</a></li>
+							<li><a href="http://contribute.jquery.org/triage/">Bug Triage</a></li>
+							<li><a href="http://contribute.jquery.org/code/">Code</a></li>
+							<li><a href="http://contribute.jquery.org/documentation/">Documentation</a></li>
+							<li><a href="http://contribute.jquery.org/web-sites/">Web Sites</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="http://events.jquery.org/">Events</a>
+						<ul class="wide">
+																		</ul>
+					</li>
+					<li class="dropdown"><a href="https://jquery.org/support/">Support</a>
+						<ul>
+							<li><a href="http://learn.jquery.com/">Learning Center</a></li>
+							<li><a href="http://try.jquery.com/">Try jQuery</a></li>
+							<li><a href="http://irc.jquery.org/">IRC/Chat</a></li>
+							<li><a href="http://forum.jquery.com/">Forums</a></li>
+							<li><a href="http://stackoverflow.com/tags/jquery/info">Stack Overflow</a></li>
+							<li><a href="https://jquery.org/support/">Commercial Support</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="https://jquery.org/">jQuery Foundation</a>
+						<ul>
+							<li><a href="https://jquery.org/join/">Join</a></li>
+							<li><a href="https://jquery.org/members/">Members</a></li>
+							<li><a href="https://jquery.org/team/">Team</a></li>
+							<li><a href="https://jquery.org/conduct/">Conduct</a></li>
+							<li><a href="http://brand.jquery.org/">Brand Guide</a></li>
+							<li><a href="https://jquery.org/donate/">Donate</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</section>
+</header>
+
+<div id="container">
+	<div id="logo-events" class="constrain clearfix">
+		<h2 class="logo"><a href="https://learn.jquery.com/" title="jQuery Learning Center">jQuery Learning Center</a></h2>
+
+		<aside><div id="broadcast"><a href="https://engine.adzerk.net/r?e=eyJhdiI6MjIyMzYsImF0IjoxMzE0LCJidCI6MCwiY20iOjcxOTMyLCJjaCI6ODM2OCwiY2siOnt9LCJjciI6MTk5Nzc1LCJkaSI6IjRkNmExZDQ3OTU5NzQ5ZWQ4MDY0OTYwZDMxOTQ3Y2JhIiwiZG0iOjEsImZjIjoyNTE4ODYsImZsIjoxMjc4NzQsImlwIjoiMTA4LjI5LjE4OC4xNjMiLCJudyI6NTQ0OSwicGMiOjAsImVjIjowLCJwciI6MjE5MzcsInJ0IjoxLCJyZiI6Imh0dHBzOi8vd3d3Lmdvb2dsZS5jb20vIiwic3QiOjUzODI5LCJ1ayI6InVlMS04Y2JlYTg4NTU5N2E0MjNmYTAwMzM0NTM0OGJlMGJlYyIsInRzIjoxNDg5MzA3NDQyNzY0LCJiZiI6dHJ1ZSwicG4iOiJicm9hZGNhc3QiLCJ1ciI6Imh0dHBzOi8vanF1ZXJ5Lm9yZy9kb25hdGUvIn0&amp;s=WpGz7po9TCBRGcqfjJEJ2nU7LNU" rel="nofollow" target="_blank" title="Support the jQuery Foundation"><img src="./$( document ).ready() _ jQuery Learning Center_files/bc85dff2b3dc44ddb9650e1659b1ad1e.png" title="Support the jQuery Foundation" alt="Support the jQuery Foundation" border="0" width="400" height="100"></a><img height="0px" width="0px" border="0" style="position:absolute;" src="./$( document ).ready() _ jQuery Learning Center_files/i.gif"></div></aside>
+	</div>
+
+	<nav id="main" class="constrain clearfix">
+		<div class="menu-top-container">
+	<ul id="menu-top" class="menu l_tinynav2">
+<li class="menu-item"><a href="http://learn.jquery.com/">Home</a></li>
+<li class="menu-item"><a href="http://learn.jquery.com/about/">About</a></li>
+<li class="menu-item"><a href="http://learn.jquery.com/contributing/">Contributing</a></li>
+<li class="menu-item"><a href="http://learn.jquery.com/style-guide/">Style Guide</a></li>
+	</ul><select id="tinynav2" class="tinynav tinynav2"><option>Navigate...</option><option value="http://learn.jquery.com">Home</option><option value="http://learn.jquery.com/about/">About</option><option value="http://learn.jquery.com/contributing/">Contributing</option><option value="http://learn.jquery.com/style-guide/">Style Guide</option></select>
+</div>
+
+		<form method="get" class="searchform" action="https://learn.jquery.com/">
+	<button type="submit" class="icon-search"><span class="visuallyhidden">search</span></button>
+	<label>
+		<span class="visuallyhidden">Search jQuery Learning Center</span>
+		<input type="text" name="s" value="" placeholder="Search">
+	</label>
+</form>
+	</nav>
+
+	<div id="content-wrapper" class="clearfix row">
+
+<div class="beta-ribbon-wrapper"><div class="beta-ribbon"><a href="https://learn.jquery.com/about/#beta">Beta</a></div></div>
+<div class="content-right twelve columns">
+	<div id="content">
+		<div class="post-heirarchy">Posted in: <a href="https://learn.jquery.com/using-jquery-core/">Using jQuery Core</a></div><article id="post-123" class="post-123 page type-page status-publish hentry">
+	<header class="entry-header">
+		<h1 class="entry-title">$( document ).ready()</h1>
+	</header>
+
+	<div class="entry-content">
+		<p>A page can't be manipulated safely until the document is "ready." jQuery detects this state of readiness for you. Code included inside <code>$( document ).ready()</code> will only run once the page Document Object Model (DOM) is ready for JavaScript code to execute. Code included inside <code>$( window ).on( "load", function() { ... })</code> will run once the entire page (images or iframes), not just the DOM, is ready.</p>
+<div class="syntaxhighlighter javascript">
+	<table>
+		<tbody>
+			<tr>
+				
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+						<div class="line n4">4</div>
+					
+				</td>
+				
+				<td class="code">
+					<pre><div class="container"><div class="line"><code><span class="comment">// A $( document ).ready() block.</span></code></div></div><div class="container"><div class="line"><code>$( document ).ready(<span class="keyword">function</span>() {</code></div></div><div class="container"><div class="line"><code>    console.log( <span class="string">"ready!"</span> );</code></div></div><div class="container"><div class="line"><code>});</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<p>Experienced developers sometimes use the shorthand <code>$()</code> for <code>$( document ).ready()</code>. If you are writing code that people who aren't experienced with jQuery may see, it's best to use the long form.</p>
+<div class="syntaxhighlighter javascript">
+	<table>
+		<tbody>
+			<tr>
+				
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+						<div class="line n4">4</div>
+					
+				</td>
+				
+				<td class="code">
+					<pre><div class="container"><div class="line"><code><span class="comment">// Shorthand for $( document ).ready()</span></code></div></div><div class="container"><div class="line"><code>$(<span class="keyword">function</span>() {</code></div></div><div class="container"><div class="line"><code>    console.log( <span class="string">"ready!"</span> );</code></div></div><div class="container"><div class="line"><code>});</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<p>You can also pass a named function to <code>$( document ).ready()</code> instead of passing an anonymous function.</p>
+<div class="syntaxhighlighter javascript">
+	<table>
+		<tbody>
+			<tr>
+				
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+						<div class="line n4">4</div>
+					
+						<div class="line n5">5</div>
+					
+						<div class="line n6">6</div>
+					
+						<div class="line n7">7</div>
+					
+						<div class="line n8">8</div>
+					
+						<div class="line n9">9</div>
+					
+				</td>
+				
+				<td class="code">
+					<pre><div class="container"><div class="line"><code><span class="comment">// Passing a named function instead of an anonymous function.</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="function"><span class="keyword">function</span> <span class="title">readyFn</span><span class="params">( jQuery )</span> {</span></code></div></div><div class="container"><div class="line"><code>    <span class="comment">// Code to run when the document is ready.</span></code></div></div><div class="container"><div class="line"><code>}</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>$( document ).ready( readyFn );</code></div></div><div class="container"><div class="line"><code><span class="comment">// or:</span></code></div></div><div class="container"><div class="line"><code>$( window ).on( <span class="string">"load"</span>, readyFn );</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<p>The example below shows <code>$( document ).ready()</code> and <code>$( window ).on( "load" )</code> in action. The code tries to load a website URL in an <code>&lt;iframe&gt;</code> and checks for both events:</p>
+<div class="syntaxhighlighter xml">
+	<table>
+		<tbody>
+			<tr>
+				
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+						<div class="line n4">4</div>
+					
+						<div class="line n5">5</div>
+					
+						<div class="line n6">6</div>
+					
+						<div class="line n7">7</div>
+					
+						<div class="line n8">8</div>
+					
+						<div class="line n9">9</div>
+					
+						<div class="line n10">10</div>
+					
+						<div class="line n11">11</div>
+					
+						<div class="line n12">12</div>
+					
+						<div class="line n13">13</div>
+					
+						<div class="line n14">14</div>
+					
+						<div class="line n15">15</div>
+					
+						<div class="line n16">16</div>
+					
+						<div class="line n17">17</div>
+					
+				</td>
+				
+				<td class="code">
+					<pre><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">html</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"https://code.jquery.com/jquery-1.9.1.min.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>    <span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript"></span></code></div></div><div class="container"><div class="line"><code>    $( document ).ready(<span class="keyword">function</span>() {</code></div></div><div class="container"><div class="line"><code>        console.log( <span class="string">"document loaded"</span> );</code></div></div><div class="container"><div class="line"><code>    });</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>    $( window ).on( <span class="string">"load"</span>, <span class="keyword">function</span>() {</code></div></div><div class="container"><div class="line"><code>        console.log( <span class="string">"window loaded"</span> );</code></div></div><div class="container"><div class="line"><code>    });</code></div></div><div class="container"><div class="line"><code>    <span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>    <span class="tag">&lt;<span class="title">iframe</span> <span class="attribute">src</span>=<span class="value">"http://techcrunch.com"</span>&gt;</span><span class="tag">&lt;/<span class="title">iframe</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>					</div>
+
+	<div class="entry-meta row">
+				<div class="bottom-links row">
+							<div class="prev six columns">
+					<a href="https://learn.jquery.com/using-jquery-core/dollar-object-vs-function/">
+					<i class="icon-chevron-left"></i>
+					$ vs $()					</a>
+				</div>
+										<div class="next six columns">
+					<a href="https://learn.jquery.com/using-jquery-core/avoid-conflicts-other-libraries/">
+					Avoiding Conflicts with Other Libraries					<i class="icon-chevron-right"></i>
+					</a>
+				</div>
+					</div>
+		
+		<aside class="meta-details six columns">
+			<h3>Last Updated</h3>
+			<ul>
+				<li class="icon-calendar icon-large" title="Last Updated"><span>January 16, 2017</span></li>
+			</ul>
+		</aside>
+		<aside class="github-feedback six columns">
+			<h3>Suggestions, Problems, Feedback?</h3>
+			<a class="button dark" href="https://github.com/jquery/learn.jquery.com/tree/master/page/using-jquery-core/document-ready.md"><i class="icon-github"></i> Open an Issue or Submit a Pull Request on GitHub</a>
+		</aside>
+
+	</div>
+</article>
+	</div>
+
+	<div id="sidebar" class="widget-area" role="complementary">
+		
+		<aside id="chapter-listing" class="widget">
+			<h3 class="widget-title">Chapters</h3>
+			<ul>
+																		<li>
+						<a href="https://learn.jquery.com/about-jquery/">
+															<i class="icon-certificate"></i>
+														About jQuery						</a>
+																																																																									</li>
+														<li class="active">
+						<a href="https://learn.jquery.com/using-jquery-core/">
+															<i class="icon-star-empty"></i>
+														Using jQuery Core						</a>
+																																																																																																																																																																																																																																																																																										<ul class="sub-chapter">
+																																																																																																																																																																																																																																																																																	<li>
+										<a href="https://learn.jquery.com/using-jquery-core/faq/">
+											Frequently Asked Questions										</a>
+									</li>
+																									</ul>
+																		</li>
+														<li>
+						<a href="https://learn.jquery.com/events/">
+															<i class="icon-tasks"></i>
+														Events						</a>
+																																																																																																																																																																																																	</li>
+														<li>
+						<a href="https://learn.jquery.com/effects/">
+															<i class="icon-picture"></i>
+														Effects						</a>
+																																																																																								</li>
+														<li>
+						<a href="https://learn.jquery.com/ajax/">
+															<i class="icon-refresh"></i>
+														Ajax						</a>
+																																																																																																																						</li>
+														<li>
+						<a href="https://learn.jquery.com/plugins/">
+															<i class="icon-bolt"></i>
+														Plugins						</a>
+																																																																																																							</li>
+														<li>
+						<a href="https://learn.jquery.com/performance/">
+															<i class="icon-dashboard"></i>
+														Performance						</a>
+																																																																																																																																																				</li>
+														<li>
+						<a href="https://learn.jquery.com/code-organization/">
+															<i class="icon-sitemap"></i>
+														Code Organization						</a>
+																																																																																																																																				<ul class="sub-chapter">
+																																																																																																							<li>
+										<a href="https://learn.jquery.com/code-organization/deferreds/">
+											Deferreds										</a>
+									</li>
+																									</ul>
+																		</li>
+														<li>
+						<a href="https://learn.jquery.com/jquery-ui/">
+															<i class="icon-magnet"></i>
+														jQuery UI						</a>
+																																																																																																																																																																				<ul class="sub-chapter">
+																																																																																																							<li>
+										<a href="https://learn.jquery.com/jquery-ui/widget-factory/">
+											Widget Factory										</a>
+									</li>
+																																												<li>
+										<a href="https://learn.jquery.com/jquery-ui/environments/">
+											Using jQuery UI										</a>
+									</li>
+																									</ul>
+																		</li>
+														<li>
+						<a href="https://learn.jquery.com/jquery-mobile/">
+															<i class="icon-th-large"></i>
+														jQuery Mobile						</a>
+																																																																									</li>
+							</ul>
+		</aside>
+
+
+	</div><!-- #sidebar .widget-area -->
+</div>
+
+	</div>
+</div>
+
+<footer class="clearfix simple">
+	<div class="constrain">
+		<div class="row">
+			<div class="six columns offset-by-three">
+				<h3><span>Books</span></h3>
+				<ul class="books">
+					<li>
+						<a href="https://www.packtpub.com/web-development/learning-jquery-fourth-edition">
+							<img src="./$( document ).ready() _ jQuery Learning Center_files/learning-jquery-4th-ed.jpg" alt="Learning jQuery 4th Edition by Karl Swedberg and Jonathan Chaffer" width="92" height="114">
+							Learning jQuery Fourth Edition
+							<cite>Karl Swedberg and Jonathan Chaffer</cite>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.manning.com/books/jquery-in-action-third-edition?a_bid=bdd5b7ad&amp;a_aid=141d9491">
+							<img src="./$( document ).ready() _ jQuery Learning Center_files/jquery-in-action.jpg" alt="jQuery in Action by Bear Bibeault, Yehuda Katz, and Aurelio De Rosa" width="92" height="114">
+							jQuery in Action
+							<cite>Bear Bibeault, Yehuda Katz, and Aurelio De Rosa</cite>
+						</a>
+					</li>
+					<li>
+						<a href="http://www.syncfusion.com/resources/techportal/ebooks/jquery?utm_medium=BizDev-jQuery.org0513">
+							<img src="./$( document ).ready() _ jQuery Learning Center_files/jquery-succinctly.jpg" alt="jQuery Succinctly by Cody Lindley" width="92" height="114">
+							jQuery Succinctly
+							<cite>Cody Lindley</cite>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		
+<div id="legal">
+	<ul class="footer-site-links">
+			<li><a class="icon-pencil" href="http://learn.jquery.com/">Learning Center</a></li>
+			<li><a class="icon-group" href="http://forum.jquery.com/">Forum</a></li>
+			<li><a class="icon-wrench" href="http://api.jquery.com/">API</a></li>
+			<li><a class="icon-twitter" href="https://twitter.com/jquery">Twitter</a></li>
+			<li><a class="icon-comments" href="http://irc.jquery.org/">IRC</a></li>
+			<li><a class="icon-github" href="https://github.com/jquery">GitHub</a></li>
+	</ul>
+	<p class="copyright">
+		Copyright 2017 <a href="https://jquery.org/team/">The jQuery Foundation</a>.
+		<a href="https://jquery.org/license/">jQuery License</a>
+		<span class="sponsor-line"><a href="http://digitalocean.com/" rel="nofollow" class="do-link">Web hosting by Digital Ocean</a> | <a href="http://www.stackpath.com/" rel="nofollow" class="sp-link">CDN by StackPath</a></span>
+	</p>
+</div>
+
+	</div>
+</footer>
+
+<script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1076265-1']);
+    _gaq.push(['_setDomainName', 'learn.jquery.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+<script type="text/javascript" src="./$( document ).ready() _ jQuery Learning Center_files/comment-reply.min.js"></script>
+<script type="text/javascript" src="./$( document ).ready() _ jQuery Learning Center_files/wp-embed.min.js"></script>
+
+
+
+<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxLoadedContent" style="width: 0px; height: 0px; overflow: hidden; float: left;"></div><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><div id="cboxNext" style="float: left;"></div><div id="cboxPrevious" style="float: left;"></div><div id="cboxSlideshow" style="float: left;"></div><div id="cboxClose" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div><div id="window-resizer-tooltip"><a href="https://learn.jquery.com/using-jquery-core/document-ready/#" title="Edit settings"></a><span class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth"></span> x <span class="tooltipHeight" id="winHeight"></span><br><span class="tooltipTitle">Viewport size: </span><span class="tooltipWidth" id="vpWidth"></span> x <span class="tooltipHeight" id="vpHeight"></span></div></body></html>
